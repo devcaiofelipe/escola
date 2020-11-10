@@ -1,7 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 
 
-export default new class Aluno {
+export default class Aluno extends Model {
   static init(connection) {
     super.init({
       nome: Sequelize.STRING,
