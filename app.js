@@ -3,6 +3,7 @@ dotenv.config();
 import express from 'express';
 import usuarioRoutes from './src/routes/usuarioRoutes';
 import tokenRoutes from './src/routes/tokenRoutes';
+import alunoRoutes from './src/routes/alunoRoutes';
 import './src/database';
 
 
@@ -21,6 +22,7 @@ class App {
   routes() {
     this.server.use('/users/', usuarioRoutes);
     this.server.use('/tokens/', tokenRoutes);
+    this.server.use('/alunos/', alunoRoutes);
   };
 };
 
