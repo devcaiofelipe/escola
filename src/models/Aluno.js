@@ -66,4 +66,7 @@ export default class Aluno extends Model {
     }, { sequelize: connection });
     return this;
   };
+  static associate(models) {
+    this.hasMany(models.Foto, { foreignKey: 'aluno_id' });
+  };
 };
